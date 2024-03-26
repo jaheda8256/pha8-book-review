@@ -1,6 +1,6 @@
 [
     {
-      "Id": 1,
+      "id": 1,
       "bookName": "The Dating PlayBook For Men",
       "author": "Andrew Ferebee",
       "image": "https://i.ibb.co/vqW7k9Y/new.png",
@@ -13,7 +13,7 @@
       "yearOfPublishing": 2015
     },
     {
-      "Id": 2,
+      "id": 2,
       "bookName": "Why Do You Hate Money?",
       "author": "Joey Perica",
       "image": "https://i.ibb.co/C7qG12J/kindpng-7318921.png",
@@ -26,7 +26,7 @@
       "yearOfPublishing": 1018
     },
     {
-      "Id": 3,
+      "id": 3,
       "bookName": "The Hate U Give",
       "author": "Angie Thomas",
       "image": "https://i.ibb.co/QD0hScT/kindpng-1064993.png",
@@ -39,7 +39,7 @@
       "yearOfPublishing": 2017
     },
     {
-      "Id": 4,
+      "id": 4,
       "bookName": "The ScholarShip Monthly Planner",
       "author": "Marianne Ragins",
       "image": "https://i.ibb.co/8xYQWWb/kindpng-4022054-1.png",
@@ -52,7 +52,7 @@
       "yearOfPublishing": 2022
     },
     {
-      "Id": 5,
+      "id": 5,
       "bookName": "Annotated texas Family Code",
       "author": "Sampson, Tindal",
       "image": "https://i.ibb.co/vZ4W0Vf/kindpng-81724-1.png",
@@ -65,7 +65,7 @@
       "yearOfPublishing": 2019
     },
     {
-      "Id": 6,
+      "id": 6,
       "bookName": "Loving Jesus More",
       "author": "Philip Ryken",
       "image": "https://i.ibb.co/7pyppZ1/kindpng-2193744-1.png",
@@ -78,7 +78,7 @@
       "yearOfPublishing": 2014
     },
     {
-      "Id": 7,
+      "id": 7,
       "bookName": "The Lost Art Of Good Conversation",
       "author": "Sakyong Mipham",
       "image": "https://i.ibb.co/XtPvWQc/kindpng-5624060-1.png",
@@ -91,7 +91,7 @@
       "yearOfPublishing": 2017
     },
     {
-      "Id": 8,
+      "id": 8,
       "bookName": "Cold Case Christianity",
       "author": "J.Warner Wallace",
       "image": "https://i.ibb.co/93SDFCP/kindpng-2592315-1.png",
@@ -104,7 +104,7 @@
       "yearOfPublishing": 2013
     },
     {
-      "Id": 9,
+      "id": 9,
       "bookName": "Spine of The Dragon",
       "author": "Kevin J.Anderson",
       "image": "https://i.ibb.co/X241BcT/kindpng-4945926-1.png",

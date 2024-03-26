@@ -13,6 +13,7 @@ import ListedBooks from './pages/ListedBooks';
 import PagesToRead from './pages/PagesToRead';
 import ReadTheBooks from './pages/ReadTheBooks';
 import DatingPlayBook from './pages/DatingPlayBook';
+import BookCard from './pages/BookCard';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,12 @@ const router = createBrowserRouter([
       {
         path: '/listedBooks',
         element: <ListedBooks></ListedBooks>
+      },
+      {
+        path: '/bookCard/:id',
+        element: <BookCard></BookCard>,
+        loader: () => fetch('../FakeData.json')
+
       },
       {
         path: '/pagesToRead',

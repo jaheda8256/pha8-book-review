@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import banner from '../assets/images/banner.png'
 
 const Hero = () => {
+  
     return (
         <div className="hero min-h-screen bg-base-200 my-20">
         <div className="hero-content flex-col lg:flex-row-reverse">
