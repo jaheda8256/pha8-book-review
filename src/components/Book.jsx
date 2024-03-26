@@ -8,9 +8,9 @@ const Book = ({book}) => {
         
             
 <Link to={`/bookCard/${id}`} className="">
-    
-     <div className="card w-96 bg-base-100  shadow-xl">
-  <figure><img className="" src={image} alt="Shoes" /></figure>
+
+     <div className="card w-96 bg-base-100  shadow-xl border">
+  <figure><img className="p-6 bg-gray-200 px-24 rounded-lg" src={image} alt="Shoes" /></figure>
   <div className="card-body">
     
      
