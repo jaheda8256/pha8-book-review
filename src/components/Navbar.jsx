@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -22,11 +22,11 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-4">
-    <NavLink to="/" className={({isActive}) => isActive ? 'text-lime-500 font-bold' : 'font-bold'}>Home</NavLink>
-    <NavLink to="/listedBooks" className={({isActive}) => isActive ? 'text-lime-500 font-bold' : 'font-bold'}>Listed Books</NavLink>
-    <NavLink to="/pagesToRead" className={({isActive}) => isActive ? 'text-lime-500 font-bold' : 'font-bold'}>Pages to Read</NavLink>
-    <NavLink to="/readTheBooks" className={({isActive}) => isActive ? 'text-lime-500 font-bold' : 'font-bold'}>Read The Books</NavLink>
-    <NavLink to="/datingPlayBook" className={({isActive}) => isActive ? 'text-lime-500 font-bold' : 'font-bold'}>Dating Play Book</NavLink>
+  <NavLink to="/" className={({isActive}) => isActive ? 'text-lime-500 font-bold border-2 rounded border-lime-500 p-1' : 'font-bold'}>Home</NavLink>
+  <NavLink to="/listedBooks" className={({isActive}) => isActive ? 'text-lime-500 font-bold border-2 rounded border-lime-500 p-1' : 'font-bold'}>Listed Books</NavLink>   
+  <NavLink to="/pagesToRead" className={({isActive}) => isActive ? 'text-lime-500 font-bold border-2 rounded border-lime-500 p-1' : 'font-bold'}>Pages to Read</NavLink>
+ <NavLink to="/readTheBooks" className={({isActive}) => isActive ? 'text-lime-500 font-bold border-2 rounded border-lime-500 p-1' : 'font-bold'}>Read The Books</NavLink>
+   <NavLink to="/datingPlayBook" className={({isActive}) => isActive ? 'text-lime-500 font-bold border-2 rounded border-lime-500 p-1' : 'font-bold'}>Dating Play Book</NavLink>
     </ul>
   </div>
   <div className="navbar-end">

@@ -1,7 +1,5 @@
 // page ar name 4
 
-
-
 const ListedBooks = () => {
     return (
         <div>
