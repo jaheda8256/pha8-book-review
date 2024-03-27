@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BookList = ({book}) => {
 
     const {id, bookName, image, author, tags, publisher, totalPages, category, rating, yearOfPublishing} = book;
@@ -12,7 +14,7 @@ const BookList = ({book}) => {
 
   <div className="flex items-center gap-8">
   <div>
-   <h2 className="card-title mt-5">
+   <h2 className="card-title lg:mt-5">
       <button className="btn btn-sm text-lime-500">{tags[0]}</button>
       <button className="btn btn-sm text-lime-500">{tags[1]}</button>
         </h2>
@@ -54,9 +56,12 @@ const BookList = ({book}) => {
        <hr />
     <div className="card-actions my-2">
       
-      <button className="btn btn-sm px-8 bg-blue-200 text-blue-400">{category}</button>
-      <button className="btn btn-sm px-8 bg-orange-200 text-orange-400">{rating}</button>
-      <button className="btn btn-sm bg-green-500 text-white">View Details</button>
+   <button className="btn btn-sm px-8 bg-blue-200
+    text-blue-400">{category}</button>
+     <button className="btn btn-sm px-8 bg-orange-200
+      text-orange-400">{rating}</button>
+    <Link to={`/bookCard/${id}`}><button className="btn btn-sm bg-green-500
+     text-white">View Details</button></Link>
     </div>
   </div>
 </div>

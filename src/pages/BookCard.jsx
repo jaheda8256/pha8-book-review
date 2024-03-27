@@ -1,6 +1,10 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveList } from "../utility/localStorage";
+import { saveList, getStoredRead } from "../utility/localStorage";
+import { saveListWish, getStoredWishList } from "../utility/localStorage";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
 
 const BookCard = () => {
 
@@ -9,13 +13,48 @@ const BookCard = () => {
     const idInt = parseInt(id);
     const bookCards = bookCard.find(bookCard => bookCard.id === idInt);
     // console.log(bookCards);
-const handleRead = () =>{
-    saveList(idInt);
-    alert('............')
+    const [books, setBooks] = useState([]);
+
+const handleRead = (book) =>{
+    const stored = getStoredRead();
+    console.log(stored);
+    const bookIsExist = stored.find((bk) => bk === idInt);
+    console.log(bookIsExist);
+  
+    if(!bookIsExist){
+        saveList(idInt)
+      setBooks([...books, book])
+      toast.success('book added to read list'); 
+    }
+    else{
+        toast.error('you have already read this book!');
+        
+    } 
+
 }
-const handleWishList = () =>{
-    saveList(idInt);
-    alert('............')
+
+const handleWishList = (book) =>{
+    const storedRead = getStoredRead();
+ 
+    const bookIsExistRead = storedRead.find((bk) => bk === idInt);
+
+
+
+    const stored = getStoredWishList();
+    const bookIsExist = stored.find((bk) => bk === idInt);
+    if(!bookIsExist && !bookIsExistRead){
+        saveListWish(idInt)
+        setBooks([...books, book])
+        
+        toast.success('book added to read list');
+       
+    }
+
+  
+    else{
+
+        toast.error('you have already read this book!');
+    }
 }
 
 
@@ -51,6 +90,7 @@ const handleWishList = () =>{
     <button onClick={handleRead} className="btn btn-outline mr-4">Read</button>
     <button onClick={handleWishList} className="btn btn-accent">Wishlist</button>
             </div>
+            <ToastContainer />
         </div>
     );
 };
