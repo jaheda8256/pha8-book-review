@@ -36,8 +36,19 @@ const ListedBooks = () => {
 
  </div>
 
+ {/* dropdown */}
+ <div className="text-center my-20">
+ <details className="dropdown">
+  <summary className="m-1 btn bg-lime-500 text-white">open or close</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</details>
+ </div>
+
 {/* tabs */}
- <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+ <div className="flex items-center mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">
 
 	<div  className={tabs === 0 ? 'read-list' : 'wishlist'}>
     <button onClick={() => handleTab(0)} >
@@ -49,10 +60,12 @@ const ListedBooks = () => {
 
 
 	<div className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900">
+    <div className={tabs === 0 ? 'read-list' : 'wishlist'}>
     <button onClick={() => handleTab(1)}  >
 		
-	<span   className={tabs === 0 ? 'read-list' : 'wishlist'}>Wishlist Books</span>
-	</button>
+        <span>Wishlist Books</span>
+        </button>
+    </div>
     </div>
 	
 	
