@@ -38,8 +38,6 @@ const handleWishList = (book) =>{
  
     const bookIsExistRead = storedRead.find((bk) => bk === idInt);
 
-
-
     const stored = getStoredWishList();
     const bookIsExist = stored.find((bk) => bk === idInt);
     if(!bookIsExist && !bookIsExistRead){
@@ -71,7 +69,7 @@ const handleWishList = (book) =>{
         <h3 className="text-xl">{bookCards.category}</h3>
        <br />
         <hr />
-        <p>Review: {bookCards.review}</p>
+        <p>Review:  {bookCards.review}</p>
         <br />
         <hr />
 

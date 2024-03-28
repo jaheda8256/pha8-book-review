@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getStoredRead } from "../utility/localStorage";
 import BookList from "../components/BookList";
 
@@ -22,6 +22,11 @@ const ListedBooks = () => {
       }
     }, [])
 
+ const [tabs, setTabs] = useState(0);
+
+ const handleTab = id =>{
+    setTabs(id);
+ }
 
     return (
         <div>
@@ -31,16 +36,24 @@ const ListedBooks = () => {
 
  </div>
 
-
+{/* tabs */}
  <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden  flex-nowrap dark:bg-gray-100 dark:text-gray-800">
-	<button  className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600">
+
+	<div  className={tabs === 0 ? 'read-list' : 'wishlist'}>
+    <button onClick={() => handleTab(0)} >
 		
-		<span>Read Books</span>
+	<span className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border-b dark:border-gray-600 dark:text-gray-600">Read Books</span>
 	</button>
-	<button   className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900">
+    </div>
+
+
+
+	<div className="flex items-center flex-shrink-0 px-5 py-3 space-x-2 border border-b-0 rounded-t-lg dark:border-gray-600 dark:text-gray-900">
+    <button onClick={() => handleTab(1)}  >
 		
-		<span>Wishlist Books</span>
+	<span   className={tabs === 0 ? 'read-list' : 'wishlist'}>Wishlist Books</span>
 	</button>
+    </div>
 	
 	
 </div>

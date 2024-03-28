@@ -14,11 +14,14 @@ import PagesToRead from './pages/PagesToRead';
 import ReadTheBooks from './pages/ReadTheBooks';
 import DatingPlayBook from './pages/DatingPlayBook';
 import BookCard from './pages/BookCard';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path: '/',
@@ -37,7 +40,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/pagesToRead',
-        element: <PagesToRead></PagesToRead>
+        element: <PagesToRead></PagesToRead>,
+        loader: () => fetch('../FakeData.json')
       },
       {
         path: '/readTheBooks',
