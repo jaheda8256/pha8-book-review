@@ -25,7 +25,6 @@ const ListedBooks = () => {
 
 
 
-
 const booked = useLoaderData();
  const [wishList, setWishList]= useState([]);
  
@@ -39,7 +38,23 @@ const booked = useLoaderData();
     setWishList(readBooks);
        console.log(booked, stored, readBooks);
       }
-    }, [booked])
+    }, [booked]);
+
+
+    const [addedBook, setAddedBook] = useState([]);
+    const handleFilter = filter =>{
+        if(filter === 'Rating'){
+            setAddedBook(readBook)
+        }
+        else if(filter === 'Number of pages'){
+            const bookId = readBook.filter((book) => book.totalPages === 'totalPages');
+            setAddedBook(bookId);
+        }
+        else if(filter === 'Publisher year'){
+            const number = readBook.filter((book) => book.totalPages === 'yearOfPublishing');
+            setAddedBook(number);
+        }
+    }
     
 
 
@@ -54,16 +69,25 @@ const booked = useLoaderData();
     </div>
 </div>
 
-<div className="text-center my-8">
+
+<div className="text-center my-20">
 <details className="dropdown">
-  <summary className="m-1 btn bg-lime-500 text-white">open or close</summary>
+  <summary className="m-1 btn bg-lime-500 text-white">Sort By</summary>
   <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li><a>Rating</a></li>
-    <li><a>Number of pages</a></li>
-    <li><a>Publisher year</a></li>
+    <li onClick={() => handleFilter('Rating')}><a>Rating</a></li>
+    <li onClick={() => handleFilter('Number of pages')}><a>Number of pages</a></li>
+    <li onClick={() => handleFilter('Publisher year')}><a>Publisher year</a></li>
   </ul>
 </details>
+
+{/* drop */}
+
+       {/* {
+          addedBook.map(book => <BookList book={book} key={readBook.id}></BookList>)
+         } */}
+
 </div>
+
  <Tabs>
     <TabList>
       <Tab><span className="font-bold">Read Books</span></Tab>
@@ -78,11 +102,12 @@ const booked = useLoaderData();
     </TabPanel>
     <TabPanel>
      
-      {
+       {
            wishList.map(book => <BookList book={book} key={wishList.id}>
                 </BookList>)
 
-             }
+             } 
+    
 
     </TabPanel>
   </Tabs>
