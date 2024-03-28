@@ -30,7 +30,7 @@ const ListedBooks = () => {
 
     return (
         <div>
-             <h1>listed book: {readBook.length}</h1>
+            
             <div className="bg-base-300">
             <h1 className="font-bold text-4xl my-12 text-center p-4">Books</h1>
 

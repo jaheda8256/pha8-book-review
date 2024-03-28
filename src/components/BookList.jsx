@@ -7,8 +7,16 @@ const BookList = ({book}) => {
         <div>
          
 <div className="card card-side bg-base-100 shadow-xl border my-4">
-  <figure className="flex justify-center bg-gray-200 rounded-xl items-center ml-20 p-16 lg:w-[240px]"><img src={image} alt="Movie"/></figure>
-  <div className="card-body">
+
+
+
+<div className="lg:flex">
+ <div>
+ <figure className="flex justify-center bg-gray-200  rounded-xl items-center lg:ml-20 lg:p-16 lg:w-[240px]"><img src={image} alt="Movie"/></figure>
+ </div>
+
+<div>
+<div className="card-body">
     <h2 className="card-title text-2xl">{bookName}</h2>
     <p>By: {author}</p>
 
@@ -64,6 +72,11 @@ const BookList = ({book}) => {
      text-white">View Details</button></Link>
     </div>
   </div>
+</div>
+</div>
+
+
+  
 </div>
         </div>
     );
