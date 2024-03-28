@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={banner} />
           <div>
-            <h1 className="text-5xl font-bold">Books to freshen <br />up your bookshelf</h1>
+            <h1 className="text-5xl font-bold font-fontPlay">Books to freshen <br />up your bookshelf</h1>
           <div className='mt-16 btn bg-lime-500 text-white'>
             <Link to="/listedBooks"> View the list</Link>
           </div>

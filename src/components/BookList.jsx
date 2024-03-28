@@ -17,7 +17,7 @@ const BookList = ({book}) => {
 
 <div>
 <div className="card-body">
-    <h2 className="card-title text-2xl">{bookName}</h2>
+    <h2 className="card-title text-2xl font-fontPlay">{bookName}</h2>
     <p>By: {author}</p>
 
   <div className="flex items-center gap-8">

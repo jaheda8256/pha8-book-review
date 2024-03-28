@@ -6,7 +6,13 @@ export default {
   ],
   theme: {
     extend: {},
+
+    fontFamily: {
+      fontPlay: ["playfair Display"]
+    }
   },
+
+
   plugins: [require("daisyui")],
 }
 

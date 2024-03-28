@@ -19,7 +19,7 @@ const Book = ({book}) => {
       <button className="btn btn-sm text-lime-500">{tags[1]}</button>
 </h2>
 
-        <h2 className="text-xl font-bold">{bookName}</h2>
+        <h2 className="text-xl font-bold font-fontPlay">{bookName}</h2>
     <p>By: {author}</p>
         <hr />
 

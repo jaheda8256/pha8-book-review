@@ -62,7 +62,7 @@ const handleWishList = (book) =>{
         <img className="lg:w-[260px]" src={bookCards.image} alt="" />
             </div>
             <div>
-        <h2 className="text-3xl">{bookCards.bookName}</h2>
+        <h2 className="text-3xl font-fontPlay">{bookCards.bookName}</h2>
         <h2>By: {bookCards.author}</h2>
         <br />
         <hr />
